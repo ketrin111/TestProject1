@@ -8,33 +8,33 @@ Scenario Outline: User views the navigation rows
 	Then a '<Header>' is displayed on Home Page
 
 	Examples: 
-| Header                    |
-| Services                 | 
+| Header            |
+| Services          | 
 | How We Do It      |
-| Our Work              |
-| Insights                  |
-| About                     |
-| Careers                  |
+| Our Work          |
+| Insights          |
+| About             |
+| Careers           |
 
-	@smoke
+@smoke
 Scenario Outline:  User search by params 
 	Given I am on the Home Page 
 	When I click search button
 	And I enter '<Header>' in the search field
 	And I click on Find button on the search popup
 	Then '<Header>' header should be displayed on the Search Page
-		Examples: 
-| Header                    |
-| Automation         |
+	Examples: 
+| Header          |
+| Automation      |
 
-	@smoke
+@smoke
 Scenario Outline:User views the Services Page
 	Given I am on the Home Page 
 	When I click on '<Header>' in the navigation table
 	Then '<text>' should be displayed on Services Page
 	Examples: 
- | Header    | text                                               |
-|Services   |By fusing consulting talent with engineering expertise, we’re able to integrate vision and execution so you can quickly move from strategy to reality.|
+ | Header    | text                                                                                                                                                 |
+ |Services   |By fusing consulting talent with engineering expertise, we’re able to integrate vision and execution so you can quickly move from strategy to reality.|
 
 @smoke
 Scenario Outline: User  views The Epam Home page
@@ -43,5 +43,5 @@ Scenario Outline: User  views The Epam Home page
 	And I switch to RU language
 	Then the following menu items should be displayed:
 	"""
-	УСЛУГИ, РЕШЕНИЯ И ПРОЕКТЫ, ПОДХОДЫ, ИДЕИ, О НАС, КАРЬЕРА В EPAM
+	РЕШЕНИЯ И ПРОЕКТЫ, О НАС, КАРЬЕРА В EPAM
 	"""

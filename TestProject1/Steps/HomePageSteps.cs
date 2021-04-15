@@ -87,7 +87,7 @@ namespace TestProject1.Steps
         {
             homePage.ListOfElement();
             List<string> navigationItems = (from a in homePage.ListOfElements()
-                                             where a.Text.Contains("")
+                                             where a.Text.Contains(" ")
                                              select a.Text).ToList();
 
             return string.Join(", ", navigationItems);
